@@ -21,6 +21,22 @@ class TratamientoRepository extends ServiceEntityRepository
         parent::__construct($registry, Tratamiento::class);
     }
 
+
+    /**
+    * @return Tratamiento[] Returns an array of Tratamiento objects
+    */
+  public function findByType(): array
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.nombre = :val')
+            ->setParameter('val', 'castrar')
+//            ->orderBy('t.id', 'ASC')
+//            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 //    /**
 //     * @return Tratamiento[] Returns an array of Tratamiento objects
 //     */

@@ -19,6 +19,7 @@ class TratamientoController extends AbstractController
     {
         return $this->render('tratamiento/index.html.twig', [
             'tratamientos' => $tratamientoRepository->findAll(),
+            'tratamiento2' => $tratamientoRepository->findByType(),
         ]);
     }
 
