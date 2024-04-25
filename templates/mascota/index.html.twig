@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mascota index{% endblock %}
+{% block title %}Mascota{% endblock %}
 
 {% block body %}
-    <h1>Mascota index</h1>
+    <h1>Mascota</h1>
 
     <table class="table">
         <thead>
@@ -38,4 +38,18 @@
     </table>
 
     <a href="{{ path('app_mascota_new') }}">Create new</a>
+
+    <h2>Mascotas ordenadas por edad de más mayor a mas joven</h2>
+    <ul>
+        {% for mascotum in mascotas2 %}
+        <li>{{ mascotum.nombre }} {{ mascotum.edad }} años</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Mascotas</h2>
+    <ul>
+        {% for mascotum in mascotas %}
+        <li>{{ mascotum.nombre }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}

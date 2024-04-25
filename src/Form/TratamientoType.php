@@ -17,7 +17,7 @@ class TratamientoType extends AbstractType
             ->add('nombre')
             ->add('mascota', EntityType::class, [
                 'class' => Mascota::class,
-'choice_label' => 'id',
+'choice_label' => 'nombre',
             ])
         ;
     }

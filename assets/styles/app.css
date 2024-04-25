@@ -1,3 +1,29 @@
 body {
-    background-color: skyblue;
+    font-family: Arial, sans-serif;
+    color: bisque;
+    background-color: #525a53;
+}
+
+/* Estilos para los encabezados h1 */
+h1 {
+    text-align: center;
+    color: white; /* Texto en blanco */
+}
+
+/* Estilos para los encabezados h2 */
+h2 {
+    color: rgb(181, 176, 176); /* Texto en gris */
+}
+a {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+table{
+    background-color: bisque;
+    color: #525a53;
+    text-align: center;
+    border: #719f76, 5px;
+    align-self: center;
+    width: 80%;
+    margin: auto;
 }

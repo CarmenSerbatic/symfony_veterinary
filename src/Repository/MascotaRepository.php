@@ -21,6 +21,19 @@ class MascotaRepository extends ServiceEntityRepository
         parent::__construct($registry, Mascota::class);
     }
 
+  /**
+     * @return Mascota[] Returns an array of Mascota objects order by edad
+     */
+    public function mascotaOrderEdad(): array
+    {
+        return $this->createQueryBuilder('m')
+            ->orderBy('m.edad', 'DESC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 //    /**
 //     * @return Mascota[] Returns an array of Mascota objects
 //     */

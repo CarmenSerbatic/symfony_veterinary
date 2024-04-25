@@ -19,6 +19,7 @@ class MascotaController extends AbstractController
     {
         return $this->render('mascota/index.html.twig', [
             'mascotas' => $mascotaRepository->findAll(),
+            'mascotas2' => $mascotaRepository->mascotaOrderEdad(),
         ]);
     }
 

@@ -15,12 +15,16 @@
                 <th>Nombre</th>
                 <td>{{ tratamiento.nombre }}</td>
             </tr>
+            <tr>
+                <th>Mascota</th>
+                <td>{{ tratamiento.mascota.nombre }}</td>
+            </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_tratamiento_index') }}">back to list</a>
+    <a href="{{ path('app_tratamiento_index') }}">Volver al inicio</a>
 
-    <a href="{{ path('app_tratamiento_edit', {'id': tratamiento.id}) }}">edit</a>
+    <a href="{{ path('app_tratamiento_edit', {'id': tratamiento.id}) }}">Editar</a>
 
     {{ include('tratamiento/_delete_form.html.twig') }}
 {% endblock %}
